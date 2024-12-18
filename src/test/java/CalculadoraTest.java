@@ -42,14 +42,6 @@ public class CalculadoraTest {
       .amend("appium:newCommandTimeout", 3600)
       .amend("appium:connectHardwareKeyboard", true);
 
-    private URL getUrl() {
-      try {
-        return new URL("http://ondemand.us-west-1.saucelabs.com:80/wd/hub");
-      } catch (MalformedURLException e) {
-        e.printStackTrace();
-      }
-    }
-
     driver = new AndroidDriver(this.getUrl(), options);
   }
 
