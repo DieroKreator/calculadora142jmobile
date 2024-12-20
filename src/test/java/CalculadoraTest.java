@@ -1,5 +1,3 @@
-import static org.junit.jupiter.api.Assertions.assertEquals;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 
@@ -7,9 +5,9 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import io.appium.java_client.remote.options.BaseOptions;
 import io.appium.java_client.AppiumBy;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.remote.options.BaseOptions;
 
 public class CalculadoraTest {
 
@@ -47,60 +45,46 @@ public class CalculadoraTest {
 
   @Test
   public void sampleTest() {
-    var el8 = driver.findElement(AppiumBy.accessibilityId("No result"));
-    el8.click();
-    var el9 = driver.findElement(AppiumBy.accessibilityId("clear"));
-    el9.click();
-    var el10 = driver.findElement(AppiumBy.accessibilityId("7"));
-    el10.click();
-    var el11 = driver.findElement(AppiumBy.accessibilityId("plus"));
-    el11.click();
-    var el12 = driver.findElement(AppiumBy.accessibilityId("9"));
-    el12.click();
-    var el13 = driver.findElement(AppiumBy.accessibilityId("equals"));
-    el13.click();
-    var el14 = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
-    el14.click();
-    var el15 = driver.findElement(AppiumBy.accessibilityId("clear"));
-    el15.click();
-    var el16 = driver.findElement(AppiumBy.accessibilityId("8"));
-    el16.click();
-    var el17 = driver.findElement(AppiumBy.accessibilityId("minus"));
-    el17.click();
-    var el18 = driver.findElement(AppiumBy.accessibilityId("2"));
-    el18.click();
-    var el19 = driver.findElement(AppiumBy.accessibilityId("equals"));
-    el19.click();
-    var el20 = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
-    el20.click();
-    var el21 = driver.findElement(AppiumBy.accessibilityId("clear"));
-    el21.click();
-    var el22 = driver.findElement(AppiumBy.accessibilityId("5"));
-    el22.click();
-    var el23 = driver.findElement(AppiumBy.accessibilityId("multiply"));
-    el23.click();
-    var el24 = driver.findElement(AppiumBy.accessibilityId("6"));
-    el24.click();
-    var el25 = driver.findElement(AppiumBy.accessibilityId("equals"));
-    el25.click();
-    var el26 = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
-    el26.click();
-    var el27 = driver.findElement(AppiumBy.accessibilityId("clear"));
-    el27.click();
-    var el28 = driver.findElement(AppiumBy.accessibilityId("8"));
-    el28.click();
-    var el29 = driver.findElement(AppiumBy.accessibilityId("1"));
-    el29.click();
-    var el30 = driver.findElement(AppiumBy.accessibilityId("divide"));
-    el30.click();
-    var el31 = driver.findElement(AppiumBy.accessibilityId("2"));
-    el31.click();
-    var el32 = driver.findElement(AppiumBy.accessibilityId("equals"));
-    el32.click();
-    var el33 = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
-    el33.click();
-    var el34 = driver.findElement(AppiumBy.accessibilityId("clear"));
-    el34.click();
+    var clearBtn = driver.findElement(AppiumBy.accessibilityId("clear"));
+    clearBtn.isDisplayed();
+    var btn7 = driver.findElement(AppiumBy.accessibilityId("7"));
+    btn7.click();
+    var plusBtn = driver.findElement(AppiumBy.accessibilityId("plus"));
+    plusBtn.click();
+    var btn9 = driver.findElement(AppiumBy.accessibilityId("9"));
+    btn9.click();
+    var equalsBtn = driver.findElement(AppiumBy.accessibilityId("equals"));
+    equalsBtn.click();
+    var resultBox = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
+    resultBox.click();
+    clearBtn.click();
+    var btn8 = driver.findElement(AppiumBy.accessibilityId("8"));
+    btn8.click();
+    var minusBtn = driver.findElement(AppiumBy.accessibilityId("minus"));
+    minusBtn.click();
+    var btn2 = driver.findElement(AppiumBy.accessibilityId("2"));
+    btn2.click();
+    equalsBtn.click();
+    resultBox.click();
+    clearBtn.click();
+    var btn5 = driver.findElement(AppiumBy.accessibilityId("5"));
+    btn5.click();
+    var multiplyBtn = driver.findElement(AppiumBy.accessibilityId("multiply"));
+    multiplyBtn.click();
+    var btn6 = driver.findElement(AppiumBy.accessibilityId("6"));
+    btn6.click();
+    equalsBtn.click();
+    resultBox.click();
+    clearBtn.click();
+    btn8.click();
+    var btn1 = driver.findElement(AppiumBy.accessibilityId("1"));
+    btn1.click();
+    var divideBtn = driver.findElement(AppiumBy.accessibilityId("divide"));
+    divideBtn.click();
+    btn2.click();
+    equalsBtn.click();
+    resultBox.click();
+    clearBtn.click();
   }
 
   @AfterEach
