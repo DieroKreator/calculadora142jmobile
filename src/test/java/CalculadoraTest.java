@@ -44,7 +44,7 @@ public class CalculadoraTest {
   }
 
   @Test
-  public void sampleTest() {
+  public void sumarDoisNumerosTest() {
     var clearBtn = driver.findElement(AppiumBy.accessibilityId("clear"));
     clearBtn.isDisplayed();
     var btn7 = driver.findElement(AppiumBy.accessibilityId("7"));
@@ -57,6 +57,12 @@ public class CalculadoraTest {
     equalsBtn.click();
     var resultBox = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
     resultBox.click();
+    
+  }
+
+  @Test
+  public void substrairDoisNumerosTest() {
+    var clearBtn = driver.findElement(AppiumBy.accessibilityId("clear"));
     clearBtn.click();
     var btn8 = driver.findElement(AppiumBy.accessibilityId("8"));
     btn8.click();
@@ -64,8 +70,15 @@ public class CalculadoraTest {
     minusBtn.click();
     var btn2 = driver.findElement(AppiumBy.accessibilityId("2"));
     btn2.click();
+    var equalsBtn = driver.findElement(AppiumBy.accessibilityId("equals"));
     equalsBtn.click();
+    var resultBox = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
     resultBox.click();
+  }
+
+  @Test
+  public void multiplicarDoisNumerosTest() {
+    var clearBtn = driver.findElement(AppiumBy.accessibilityId("clear"));
     clearBtn.click();
     var btn5 = driver.findElement(AppiumBy.accessibilityId("5"));
     btn5.click();
@@ -73,16 +86,27 @@ public class CalculadoraTest {
     multiplyBtn.click();
     var btn6 = driver.findElement(AppiumBy.accessibilityId("6"));
     btn6.click();
+    var equalsBtn = driver.findElement(AppiumBy.accessibilityId("equals"));
     equalsBtn.click();
+    var resultBox = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
     resultBox.click();
+  }
+
+  @Test
+  public void dividirDoisNumerosTest() {
+    var clearBtn = driver.findElement(AppiumBy.accessibilityId("clear"));
     clearBtn.click();
+    var btn8 = driver.findElement(AppiumBy.accessibilityId("8"));
     btn8.click();
     var btn1 = driver.findElement(AppiumBy.accessibilityId("1"));
     btn1.click();
     var divideBtn = driver.findElement(AppiumBy.accessibilityId("divide"));
     divideBtn.click();
+    var btn2 = driver.findElement(AppiumBy.accessibilityId("2"));
     btn2.click();
+    var equalsBtn = driver.findElement(AppiumBy.accessibilityId("equals"));
     equalsBtn.click();
+    var resultBox = driver.findElement(AppiumBy.id("com.google.android.calculator:id/result_final"));
     resultBox.click();
     clearBtn.click();
   }
